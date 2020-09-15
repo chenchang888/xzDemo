@@ -1,0 +1,45 @@
+<view class="page-container msg-list-wrapper">
+
+	<!-- 分类按钮 -->
+	<view class="type-btn">
+		<image style="opacity: {{title === '随手拍列表' ? '1' : '0.6'}};" src="../../img/ss2.png" mode="widthFix" bindtap="addTakePicture" ></image>
+		<image style="opacity: {{title === '留言列表' ? '1' : '0.6'}}" src="../../img/ss3.png" mode="widthFix"  bindtap="addMessage"></image>
+	</view>
+
+	<view class="h1">{{title}}</view>
+
+	<!-- 搜索框 -->
+	<view class="search-box">
+		<view class="search-input">
+			<image src="../../img/search.png" mode="heightFix"></image>
+			<input placeholder="请输入留言标题搜索" value="{{name}}" bindblur="inputValue"></input>
+		</view>
+		<view class="search-btn" bindtap="search">点击查询</view>
+	</view>
+
+	<!-- 表格 -->
+	<view class="table">
+		<view class="thead">
+			<view class="th">序号</view>
+			<view class="th">标题</view>
+			<view class="th">回复状态</view>
+			<view class="th">回复单位</view>
+		</view>
+		<scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="nearBottom"  style='height:{{scroll_height}}rpx'>
+			<view class="tbody">
+			<block  wx:for="{{message}}" wx:for-item="item" wx:key="id">
+				<view class="tr" data-id="{{item.id}}" data-type="{{type}}" bindtap="getById">
+					<view class="td">{{index+1}}</view>
+					<view class="td"  style="word-break: break-all;">{{item.title}}</view>
+					<view class="td green">
+						<view  wx:if="{{item.status == 1}}">已回复</view>
+						<view style="color:#eb1b1b" wx:if="{{item.status == 0}}">未回复</view>
+					</view>
+					<view class="td">{{item.unit}}</view>
+				</view>
+				</block>
+				<view class="pageMsg">{{msg}}</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

@@ -1,0 +1,107 @@
+<view class="page-container write-opinion-wrapper" style="height:{{status > 0 ? 140 : 100}}vh ">
+  <!-- 顶部 -->
+  <view class="opinion-notice">
+    <view class="title">意见征集须知</view>
+    <view class="ol">
+      <view class="ol-item">1、意见征集时应该遵守宪法、法律、法规、规章以及社会公德，如实反映情况，不得捏造、歪曲事实，不得诽谤诬告陷害他人。</view>
+      <view class="ol-item">2、收到网民意见征集后，我们再后台审核通过后，将征集意见整理反馈后，显示在前台。</view>
+    </view>
+  </view>
+
+  <!-- 装饰线 -->
+  <view class="line"></view>
+
+  <!-- 填写 -->
+  <view class="write-box" hidden="{{!operation}}">
+    <view class="title">
+      <text class="red-star">*</text>{{commentTitle}}
+    </view>
+    <view class="form-item">
+      <text class="label">
+            <text class="red-star">*</text>你的姓名：
+      </text>
+      <view class="input-box">
+        <text>{{name}}</text>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <text class="label">
+            <text class="red-star">*</text>联系方式：
+      </text>
+      <view class="input-box">
+        <text>{{contact}}</text>
+      </view>
+    </view>
+    <view class="form-item">
+      <text class="label">
+            <text class="red-star">*</text>意见内容：
+      </text>
+    </view>
+    <view class="textarea-box">
+      <textarea disabled="{{operation}}"  value="{{content}}"></textarea>
+    </view>
+    <view wx:if="{{status >0}}" style="margin-top: 20px;">
+      <view class="form-item">
+        <text class="label">
+            <text class="red-star">*</text>回复单位：
+        </text>
+        <view class="input-box">
+          <text>{{unit}}</text>
+        </view>
+      </view>
+      <view class="form-item">
+        <text class="label">
+            <text class="red-star">*</text>回复时间：
+        </text>
+        <view class="input-box">
+          <text>{{replyTime}}</text>
+        </view>
+      </view>
+      <view class="form-item">
+        <text class="label">
+            <text class="red-star">*</text>回复内容：
+        </text>
+      </view>
+      <view class="textarea-box">
+        <textarea disabled="{{operation}}" value="{{reply}}"></textarea>
+      </view>
+    </view>
+  </view>
+  <view hidden="{{!!operation}}" class="write-box">
+    <view class="title">
+      <text class="red-star">*</text>{{commentTitle}}
+    </view>
+    <view class="form-item">
+      <text class="label">
+            <text class="red-star">*</text>你的姓名：
+      </text>
+      <view class="input-box">
+        <input placeholder-class="placeholder-class" bindinput="getName" placeholder="请输入您的姓名"></input>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <text class="label">
+            <text class="red-star">*</text>联系方式：
+      </text>
+      <view class="input-box">
+        <input placeholder-class="placeholder-class" bindinput="getContact" placeholder="请输入您的邮箱/固话/手机号"></input>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <text class="label">
+            <text class="red-star">*</text>意见内容：({{content.length >0 ?content.length :0}}/1000)
+      </text>
+    </view>
+
+    <view class="textarea-box">
+      <textarea maxlength="1000" bindinput="getContent" placeholder-class="placeholder-class" placeholder="请输入意见内容"></textarea>
+    </view>
+    <view class="btn-box">
+      <view bindtap="goBack">取消</view>
+      <view bindtap="submit">提交</view>
+    </view>
+  </view>
+</view>

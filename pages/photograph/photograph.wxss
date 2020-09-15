@@ -1,0 +1,155 @@
+.write-opinion-wrapper {
+   background: #f6f6f6;
+}
+
+.opinion-notice {
+   padding: 10rpx 24rpx;
+}
+
+.opinion-notice .title {
+   font-size: 18px;
+}
+
+.opinion-notice .ol {
+   padding-top: 10rpx;
+}
+
+.opinion-notice .ol .ol-item {
+   line-height: 1.8;
+   font-size: 16px;
+}
+
+.line {
+   width: 100%;
+   height: 6rpx;
+   background: #fbfbfb;
+   box-shadow: 0 0 2px #eee;
+}
+
+.write-box {
+   padding: 10rpx 20rpx;
+}
+
+.write-box .red-star {
+   position: absolute;
+   left: 0;
+   top: 4px;
+   font-size: 18px;
+   color: red;
+}
+
+.write-box .title {
+   position: relative;
+   display: flex;
+   align-items: center;
+   height: 60rpx;
+   padding-left: 16px;
+   font-size: 14px;
+   overflow: hidden;
+}
+
+.write-box .upload {
+   margin-bottom: 8px;
+}
+
+.write-box .upload image {
+   height: 24px;
+   margin: 0 10px;
+}
+
+.write-box .upload .image-upload {
+   display: inline-flex;
+   align-items: center;
+}
+
+.write-box .title .red-star {
+   top: 8px;
+}
+
+.write-box .form-item {
+   position: relative;
+   margin-bottom: 10px;
+   height: 60rpx;
+   display: flex;
+   align-items: center;
+   padding-left: 16px;
+   font-size: 14px;
+   overflow: hidden;
+}
+
+.write-box .form-item .red-star {
+   top: 8px;
+}
+
+.write-box .form-item .input-box {
+   flex: 1;
+   height: 100%;
+   padding: 0 10px;
+   background: #fff;
+   border: 1px solid #ddd;
+   box-sizing: border-box;
+}
+
+.write-box .form-item .input-box input {
+   height: 100%;
+}
+
+.textarea-box {
+   padding: 8px 10px;
+   background: #fff;
+   border: 1px solid #ddd;
+}
+
+.textarea-box textarea {
+   width: 100%;
+}
+
+.btn-box {
+   display: flex;
+   margin-top: 12px;
+}
+
+.btn-box view {
+   flex: 1;
+   height: 32px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 6px;
+   background: #dedede;
+}
+
+.btn-box view:last-child {
+   margin-left: 20rpx;
+   background: #2295fa;
+   color: #fff;
+}
+
+/* 上传列表 */
+.upload-list {
+padding: 10px;
+}
+
+.upload-list .list-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 10px;
+   font-size: 12px;
+}
+.upload-list .list-item .status {
+   margin-right: 5px;
+   color: green;
+}
+
+.upload-list .list-item .del {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 16px;
+   height: 16px;
+   border-radius: 20px;
+   background: #d93135;
+   color: #fff;
+   font-size: 12px;
+}

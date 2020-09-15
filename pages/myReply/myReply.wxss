@@ -1,0 +1,18 @@
+@import "/styles/base.wxss";
+.reply_time{
+  display: flex;
+  justify-content: space-between;
+}
+.replied{
+  color: #07c160;
+}
+.reply_content{
+  margin: 36rpx 0;
+}
+.reply_title{
+  font-size: 36rpx;
+  color: var(--themeColor);
+}
+.no_data{
+  text-align: center;
+}

@@ -1,0 +1,60 @@
+.h1 {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-box {
+  width: 104rpx;
+  height: 104rpx;
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.img-box image {
+  width: 100%;
+}
+
+.name {
+  line-height: 2;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: '宋体';
+}
+
+.list {
+  padding-top: 10px
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  padding: 30px 10px;
+  border: 2px solid rgb(251,251,251);
+  border-width: 2px 0;
+}
+
+.list-item:active {
+  background: #eee;
+}
+
+.list-item image {
+  width: 24px;
+}
+
+.list-item .left-box {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.list-item .left-box image {
+  width: 24px;
+  margin-right: 10px;
+}

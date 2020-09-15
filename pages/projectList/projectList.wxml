@@ -1,0 +1,24 @@
+<view class="page-container news-wrapper">
+	<!-- 最新发布 -->
+	<view class="public-title news-bar" style="height:52px;">
+		<text>最新发布</text>
+	</view>
+	<scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="nearBottom" style='height:{{scroll_height}}px'>
+		<!-- 列表 -->
+		<view class="news-list" wx:if="{{policyList.length > 0}}">
+			<view class="list-item" wx:for="{{policyList}}" data-id="{{item.id}}" wx:key="id" data-key="{{item.id}}" bindtap="toDetail">
+				<view class="title">
+					<view class="title-item">{{item.title}}</view>
+					<view class="detail">{{item.colName}}>></view>
+				</view>
+				<view class="bottom-bar">
+					<text>{{item.source}}</text>
+					<text>{{item.releaseDate}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="news-list" wx:else>
+			<view style="text-align: center;margin-top: 20px;color:#1D9CFE">暂无数据</view>
+		</view>
+	</scroll-view>
+</view>

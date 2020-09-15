@@ -1,0 +1,122 @@
+.index-top-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 政民互动 */
+.policy-wrapper {
+  background: #fff;
+}
+
+.policy-wrapper .list {
+  width: 616rpx;
+  margin: 0 auto;
+  padding-bottom: 1px;
+}
+
+.policy-wrapper .list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20rpx 26rpx 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 0 8px #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.policy-wrapper .list-item .btn {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+  margin-left: 16rpx;
+  margin-bottom: 22rpx;
+  font-size: 12px;
+  color: #fff;
+  background: #5dc3fe;
+}
+
+.policy-wrapper .list-item .text-img-box {
+  display: flex;
+  align-items: center;
+}
+
+.policy-wrapper .list-item .l-box {
+  width: 380rpx;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  margin-right: 30rpx;
+  box-sizing: border-box;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+
+.policy-wrapper .list-item .l-box text {
+  flex: 1;
+  font-family: SourceHanSansSC-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 38rpx;
+  color: #282828;
+}
+
+.policy-wrapper .list-item .l-box > view {
+  font-family: SourceHanSansSC-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 38rpx;
+  color: #282828;
+}
+
+.policy-wrapper .list-item .text-img-box .img-box {
+  width: 120rpx;
+  text-align: center;
+}
+
+.policy-wrapper .list-item .text-img-box .img-box text {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	letter-spacing: 0rpx;
+	color: #282828;
+}
+
+.policy-wrapper .list-item .text-img-box image {
+  width: 105rpx;
+}
+
+/* 底部样式 */
+.index-bottom-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100rpx;
+  background: #2295fa;
+}
+
+.index-bottom-wrapper .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-bottom-wrapper .nav-item image {
+  height: 45rpx;
+}
+
+.index-bottom-wrapper .nav-item text {
+  margin-top: 10rpx;
+  font-size: 12px;
+  color: #fff;
+}

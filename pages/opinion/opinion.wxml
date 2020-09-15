@@ -1,0 +1,36 @@
+<view class="page-container opinion-wrapper">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <view class="search-input">
+      <image src="../../img/search.png" mode="heightFix"></image>
+      <input bindinput="getInputContent" placeholder="请输入意见征集键词搜索"></input>
+    </view>
+    <view class="search-btn" bindtap="search">点击查询</view>
+  </view>
+
+  <!-- banner -->
+  <view class="banner">
+    <image src="../../img/bg2.png" mode="widthFix"></image>
+  </view>
+
+  <!-- 最新发布 -->
+  <view class="public-title public-title-new">最新发布</view>
+  <scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="nearBottom" style='height:{{scroll_height}}rpx'>
+    <!-- 列表 -->
+    <view class="news-list" wx:if="{{commentList.length > 0}}">
+      <view class="list-item" wx:for="{{commentList}}" bindtap="toDetail" data-id="{{item.id}}" wx:key="id" 
+      data-key="{{item.id}}" data-title="{{item.title}}">
+        <view class="title" style="word-break: break-all;">
+          {{item.title}}
+        </view>
+        <view class="bottom-bar">
+          <text>{{item.unit}}</text>
+          <text>{{item.commentTime}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="news-list" wx:else>
+      <view style="text-align: center;margin-top: 20px;color:#1D9CFE">暂无数据</view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'MicrosoftYaHei';
+  src: url('https://xzqxcx.ahegov.com/static/css/appletfont/Microsoft-YaHei.ttf');
+}
+
+page {
+  font-family:"MicrosoftYaHei"
+}
+
+/* 最外层布局 */
+.page-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+}
+
+/* 通用的标题样式 */
+.public-title {
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 43rpx;
+  color: #2295fa;
+  font-size: 16px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.public-title::before {
+  display: block;
+  content: '';
+  width: 10rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+  background: #2295fa;
+}
+
+/* 通用附件和政策解读 */
+.public-list-text {
+  padding: 23rpx 26rpx 14rpx;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.public-list-text .title {
+  margin-bottom: 20rpx;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.public-list-text .list,
+.public-list-text .text {
+  padding-left: 10rpx;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.placeholder-class {
+  color: rgb(209, 209, 209);
+}
+
+.red {
+  color: red;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 27rpx 0 25rpx;
+  line-height: 1;
+}
+
+.logo image {
+  height: 12px;
+}
+
+.logo text {
+  padding-left: 3px;
+  font-size: 12px;
+  color: #adadad;
+}

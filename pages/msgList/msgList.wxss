@@ -1,0 +1,135 @@
+.type-btn {
+   display: flex;
+   justify-content: center;
+   padding-top: 37rpx;
+}
+
+.type-btn image {
+   width: 180rpx;
+   margin-right: 20rpx;
+}
+
+.type-btn image:last-child {
+   margin-right: 0;
+}
+
+.h1 {
+   font-size: 18px;
+   padding: 0 28rpx;
+}
+
+.search-box {
+   width: 100%;
+   padding: 20rpx 0 30rpx 0;
+   display: flex;
+   justify-content: center;
+}
+
+.search-box .search-input {
+   display: flex;
+   align-items: center;
+   width: 560rpx;
+   padding: 4px 10px;
+   margin-right: 10px;
+   background: rgba(255, 255, 255, .8);
+   border-radius: 20px;
+   box-sizing: border-box;
+   background: #f4f4f4;
+   border: 1px solid #eee;
+}
+
+.search-box .search-input image {
+   height: 18px;
+}
+
+.search-box .search-input input {
+   padding-left: 10px;
+   flex: 1;
+   font-size: 14px;
+}
+
+.search-box .search-btn {
+   width: 120rpx;
+   background: #fff;
+   box-sizing: border-box;
+   border: 1px solid #eee;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 12px;
+   border-radius: 28px;
+   color: #333;
+}
+
+.table {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+
+   margin: 0 20rpx 20rpx;
+   background: #fff;
+}
+
+.scroll-view {
+   /* height: 300px; */
+   flex: 1;
+}
+
+.thead {
+   display: flex;
+   padding: 5px;
+   font-weight: bold;
+   font-size: 14px;
+   border-bottom: 1px solid #eee;
+}
+
+.tbody {
+   padding: 5px;
+}
+
+.tbody .tr {
+   display: flex;
+   margin-bottom: 10px;
+   line-height: 1.6;
+   font-size: 13px;
+}
+
+.thead .th:nth-child(1),
+.tbody .tr .td:nth-child(1) {
+   width: 40px;
+   text-align: center;
+}
+
+.thead .th:nth-child(2),
+.tbody .tr .td:nth-child(2) {
+   width: calc(100% - 180px);
+   text-align: center;
+   box-sizing: border-box;
+}
+
+.tbody .tr .td:nth-child(2) {
+   padding: 0 6px;
+   text-align: left;
+}
+
+.thead .th:nth-child(3),
+.tbody .tr .td:nth-child(3),
+.thead .th:nth-child(4),
+.tbody .tr .td:nth-child(4) {
+   width: 70px;
+   text-align: center;
+}
+.tbody .tr:nth-child(2n) .td {
+background: #F8F8F8;
+}
+.red {
+   color: #eb1b1b;
+}
+
+.green {
+   color: #09ba31;
+}
+.pageMsg {
+   color: #C0C0C0;
+   text-align: center;
+}

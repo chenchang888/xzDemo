@@ -1,0 +1,189 @@
+.index-top-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* banner */
+.banner {
+  overflow: hidden;
+}
+
+.banner image {
+  width: 100%;
+}
+
+/* 政府四类 */
+.four-policy-type {
+  display: flex;
+  justify-content: center;
+  padding-top: 27rpx;
+  padding-bottom: 38rpx;
+  border-bottom: 1px solid #dfdfdf;
+  background: #fff;
+}
+
+.four-policy-type .item {
+  width: 161rpx;
+  margin-right: 10rpx;
+}
+
+.four-policy-type .item text {
+  margin-top: 16rpx;
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-family: SourceHanSansSC-Regular;
+  font-size: 22rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: -1rpx;
+  color: #000000;
+}
+
+.four-policy-type .item:last-child {
+  margin-right: 0;
+}
+
+.four-policy-type .item image {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0rpx 4rpx 5rpx 0rpx rgba(0, 0, 0, 0.09);
+}
+
+/* 企业政策 */
+.corporate-policy {
+  margin-top: 39rpx;
+  background: #fff;
+}
+
+.img-text-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 34rpx 0 0 52rpx;
+}
+
+.img-text-list .item {
+  width: 150rpx;
+  padding: 16rpx 0 21rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16rpx;
+  margin-bottom: 40rpx;
+  border-radius: 8px;
+  box-shadow: 0rpx 4rpx 5rpx 0rpx rgba(0, 0, 0, 0.09);
+}
+
+.img-text-list .item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.corporate-policy .img-text-list .item:nth-child(1) .img-box {
+  background: #3979D1;
+}
+.corporate-policy .img-text-list .item:nth-child(2) .img-box {
+  background: #2F90FB;
+}
+
+.corporate-policy .img-text-list .item:nth-child(3) .img-box {
+  background: #1BCF54;
+}
+.corporate-policy .img-text-list .item:nth-child(4)  .img-box{
+  background: #A29EFE;
+}
+.corporate-policy .img-text-list .item:nth-child(5)  .img-box{
+  background: #51B9F2;
+}
+.corporate-policy .img-text-list .item:nth-child(6) .img-box {
+  background: #FDAB3D;
+}
+.corporate-policy .img-text-list .item:nth-child(7) .img-box {
+  background: #FF8613;
+}
+.corporate-policy .img-text-list .item:nth-child(8) .img-box {
+  background: #45A0F9;
+}
+
+.corporate-policy .img-text-list .person:nth-child(1) .img-box {
+  background: #13C88B;
+}
+.corporate-policy .img-text-list .person:nth-child(2) .img-box {
+  background: #32B2B9;
+}
+
+.corporate-policy .img-text-list .person:nth-child(3) .img-box {
+  background: #2BF0B3;
+}
+.corporate-policy .img-text-list .person:nth-child(4)  .img-box{
+  background: #286DF2;
+}
+.corporate-policy .img-text-list .person:nth-child(5)  .img-box{
+  background: #77E231;
+}
+.corporate-policy .img-text-list .person:nth-child(6) .img-box {
+  background: #FE5A18;
+}
+.corporate-policy .img-text-list .person:nth-child(7) .img-box {
+  background: #F17AD6;
+}
+.corporate-policy .img-text-list .person:nth-child(8) .img-box {
+  background: #45A0F9;
+}
+
+.img-text-list .item .img-box {
+  width: 104rpx;
+  height: 104rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0rpx 4rpx 5rpx 0rpx rgba(0, 0, 0, 0.09);
+}
+
+.img-text-list .item .img-box.blue {
+  background: #4d8ce8;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img-text-list .item .img-box image {
+  width: 50rpx;
+}
+
+.img-text-list .item text {
+  margin-top: 12rpx;
+  display: block;
+  text-align: center;
+  font-family: MicrosoftYaHei;
+  font-size: 21rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #000000;
+}
+
+/* 底部样式 */
+.index-bottom-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100rpx;
+  background: #2295fa;
+}
+
+.index-bottom-wrapper .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-bottom-wrapper .nav-item image {
+  height: 45rpx;
+}
+
+.index-bottom-wrapper .nav-item text {
+  margin-top: 10rpx;
+  font-size: 12px;
+  color: #fff;
+}

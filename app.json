@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/interactive/interactive",
+    "pages/index/index",
+    "pages/out/out",
+    "pages/slideshow/slideshow",
+    "pages/msgList/msgList",
+    "pages/msgDetail/msgDetail",
+    "pages/photograph/photograph",
+    "pages/leaveMessage/leaveMessage",
+    "pages/writeOpinion/writeOpinion",
+    "pages/opinion/opinion",
+    "pages/newsDetail/newsDetail",
+    "pages/opinionDetail/opinionDetail",
+    "pages/person/person",
+    "pages/collection/collection",
+    "pages/news/news",
+    "pages/photoDetail/photoDetail",
+    "pages/myReply/myReply",
+    "pages/replyKnow/replyKnow",
+    "pages/replyForm/replyForm"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2295fa",
+    "navigationBarTitleText": "宣州区人民政府",
+    "navigationBarTextStyle": "white"
+  },
+   "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

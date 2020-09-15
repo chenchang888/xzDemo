@@ -1,0 +1,23 @@
+<view class="page-container news-wrapper">
+
+  <view class="public-title news-bar" style="height:52px;">
+    <text>我的收藏</text>
+  </view>
+  <scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="nearBottom" style='height:{{scroll_height}}px'>
+    <!-- 列表 -->
+    <view class="news-list" wx:if="{{policyList.length > 0}}">
+      <view  class="list-item" wx:for="{{policyList}}" wx:key="id"  data-key="{{item.id}}">
+        <view class="title" data-id="{{item.policyId}}" data-type="{{item.type}}" bindtap="toDetail">
+          <view class="title-item">{{item.title}}</view>
+        </view>
+        <view class="bottom-bar">
+          <text>{{item.releaseDate}}</text>
+            <text class="detail"data-id="{{item.id}}" wx:key="id" bindtap="delEnshrine" >删除</text>
+        </view>
+      </view>
+    </view>
+    <view class="news-list" style="background: #FFF;height: 55px;" wx:else>
+      <view style="text-align: center;margin-top: 20px;">暂无数据</view>
+    </view>
+  </scroll-view>
+</view>

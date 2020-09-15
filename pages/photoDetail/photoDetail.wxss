@@ -1,0 +1,76 @@
+.h1 {
+   padding: 18rpx;
+   background: #fff;
+   font-size: 18px;
+   box-shadow: 0 0 4px #ddd;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.title-box {
+   margin-top: 2px;
+   padding: 18rpx;
+   background: #fff;
+}
+
+.title-box .title {
+   font-size: 16px;
+}
+
+.title-box .time-status {
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 14px;
+}
+
+.title-box .p {
+   padding-top: 10px;
+   line-height: 1.5;
+}
+
+.title-box.content {
+   margin-top: 2px;
+   box-shadow: 0 0 4px #ddd;
+}
+
+.reply-box {
+   padding: 18rpx;
+}
+
+.reply-box .title {
+   position: relative;
+   display: inline-block;
+   line-height: 28px;
+   padding: 0 4px;
+   background: #FF3836;
+   color: #fff;
+}
+
+.reply-box .title::after {
+   position: absolute;
+   top: 0;
+   right: -8px;
+   display: block;
+   content: '';
+   width: 0;
+   height: 0;
+   border-top: 14px solid transparent;
+   border-left: 8px solid #FF3836;
+   border-bottom: 14px solid transparent;
+}
+
+.reply-box .content {
+   padding: 5px 2px;
+   line-height: 1.5;
+}
+
+.reply-box .time {
+   padding: 0 2px;
+}
+
+.media-box {
+   background: transparent;
+}

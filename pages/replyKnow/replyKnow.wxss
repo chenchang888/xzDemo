@@ -1,0 +1,23 @@
+@import "/styles/base.wxss";
+.container_box .know_title {
+  width: 100%;
+  margin: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #333;
+}
+.know_text{
+  padding: 0 10rpx;
+  color: #555;
+}
+.container_box button {
+  margin: 50rpx;
+}
+.knom_btn{
+  color: #fff;
+  background-color: var(--themeColor);
+}
+.display_flag{
+  display: none;
+}

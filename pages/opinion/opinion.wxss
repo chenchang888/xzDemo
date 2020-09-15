@@ -1,0 +1,93 @@
+.search-box {
+   width: 100%;
+   padding: 20rpx 0 30rpx 0;
+   display: flex;
+   justify-content: center;
+}
+
+.search-box .search-input {
+   display: flex;
+   align-items: center;
+   width: 474rpx;
+   padding: 4px 10px;
+   margin-right: 10px;
+   background: rgba(255, 255, 255, .8);
+   border-radius: 20px;
+   box-sizing: border-box;
+   background: #f4f4f4;
+   border: 1px solid #eee;
+}
+
+.search-box .search-input image {
+   height: 18px;
+}
+
+.search-box .search-input input {
+   padding-left: 10px;
+   flex: 1;
+   font-size: 14px;
+}
+
+.search-box .search-btn {
+   width: 120rpx;
+   background: #fff;
+   box-sizing: border-box;
+   border: 1px solid #eee;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 12px;
+   border-radius: 28px;
+   color: #333;
+}
+
+.banner {
+   width: 710rpx;
+   margin: 0 auto;
+}
+
+.banner image {
+   width: 100%;
+   display: block;
+}
+
+.public-title-new {
+   height: 90rpx;
+}
+
+.news-list {
+   flex: 1;
+   overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
+}
+
+.news-list .list-item {
+   padding: 10px 22rpx;
+   border-bottom: 1px solid #ddd;
+}
+
+.news-list .list-item .title {
+   position: relative;
+   line-height: 20px;
+   font-size: 14px;
+}
+
+.news-list .list-item .detail {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   display: inline-block;
+   padding: 0 5px;
+   background: #5cc3fe;
+   border-radius: 4px;
+   color: #fff;
+   font-size: 12px;
+}
+
+.news-list .list-item .bottom-bar {
+   margin-top: 6px;
+   display: flex;
+   justify-content: space-between;
+   color: #747474;
+   font-size: 12px;
+}

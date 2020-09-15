@@ -1,0 +1,42 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="page-container news-detail-wrapper">
+  <!-- 基础信息 -->
+  <view class="basic-info">
+    <view class="title">
+      {{title}}
+    </view>
+    <view class="bottom-box">
+      <text>{{unit}}</text>
+      <text>{{time}}</text>
+    </view>
+  </view>
+
+  <view class="scroll-wrapper">
+
+    <!-- 文章 -->
+    <view class="article-wrapper">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+  <!-- 底部 -->
+    <view class="bottom-bar">
+      <view class="bar-item" bindtap="setComment">
+        <image src="../../img/a2.png" mode="heightFix"></image>
+        <text>意见</text>
+      </view>
+      <view class="bar-item" bindtap="clickCollect">
+        <view class="img-box">
+          <image hidden="{{showCollect}}" src="../../img/star0.png" mode="heightFix"></image>
+          <image hidden="{{!showCollect}}" src="../../img/star1.png" mode="heightFix"></image>
+        </view>
+        <text>收藏</text>
+      </view>
+      <button open-type="share">
+        <view class="bar-item">
+          <image src="../../img/a3.png" mode="heightFix"></image>
+          <text>分享</text>
+        </view>
+      </button>
+    </view>
+</view>

@@ -1,0 +1,146 @@
+<view class="writeInfo_container">
+	<view class="container" wx:if="{{nextFlag}}">
+		<view class="container_box">
+			<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+			<view class="form_content">
+				<!-- <view class="form_title">政府信息公开申请表</view> -->
+				<view class="select_category">
+					<view class="personal {{select?'select_active':''}}" bindtap="handlePersonal">个人</view>
+					<view class="company {{select?'':'select_active'}}" bindtap="handleCompany">企业</view>
+				</view>
+				<!-- 个人表单内容 -->
+				<mp-form id="form" rules="{{rules}}" models="{{personalFormData}}" wx:if="{{select}}">
+					<mp-cells ext-class="my-cells">
+						<!-- 姓名 -->
+						<mp-cell prop="name" title="姓名/名称：">
+							<input value="{{personalFormData.name}}" bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入您的姓名/名称(必填)"/>
+						</mp-cell>
+						<!-- 工作单位 -->
+						<mp-cell prop="unit" title="工作单位：">
+							<input value="{{personalFormData.unit}}" bindblur="formCompanyChange" data-field="unit" class="weui-input" placeholder="请输入您的工作单位(必填)" />
+						</mp-cell>
+						<!-- 证件名称 -->
+						<view prop="cardType" class="weui-cell weui-cell_select">
+							<view class="weui-cell__hd weui-cell__hd_in-select-after">
+								<view class="weui-label">证件名称：</view>
+							</view>
+							<view class="weui-cell__bd">
+								<picker bindchange="bindCardChange" value="{{cardIndex}}" range="{{cards}}">
+									<view class="weui-select">{{cards[cardIndex]}}</view>
+								</picker>
+							</view>
+						</view>
+						<!-- 证件号码 -->
+						<mp-cell prop="cardCode" title="证件号码：">
+							<input value="{{personalFormData.cardCode}}" bindblur="formIdNumberChange" data-field="cardCode" class="weui-input" placeholder="请输入您的证件号码(必填)" />
+						</mp-cell>
+						<!-- 电子邮箱 -->
+						<mp-cell prop="email" title="电子邮箱：">
+							<input value="{{personalFormData.email}}" bindblur="formEmailChange" data-field="email" class="weui-input" placeholder="请输入您的电子邮箱(必填)" />
+						</mp-cell>
+						<!-- 联系电话 -->
+						<mp-cell prop="phone" title="联系电话：">
+							<input value="{{personalFormData.phone}}" bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入您的联系电话(必填)" />
+						</mp-cell>
+						<!-- 邮政编码 -->
+						<mp-cell prop="postCode" title="邮政编码：">
+							<input value="{{personalFormData.postCode}}" bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" />
+						</mp-cell>
+						<!-- 联系地址 -->
+						<mp-cell prop="address" title="联系地址：">
+							<input value="{{personalFormData.address}}" bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" />
+						</mp-cell>
+						<!-- 传真 -->
+						<mp-cell prop="fax" title="传 真：">
+							<input value="{{personalFormData.fax}}" bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" />
+						</mp-cell>
+					</mp-cells>
+				</mp-form>
+				<!-- --------------分隔线---------------- -->
+				<!-- 企业表单内容 -->
+				<mp-form id="form" rules="{{rule}}" models="{{enterpriseFormData}}" wx:else>
+					<mp-cells ext-class="my-cells">
+						<!-- 企业名称 -->
+						<mp-cell prop="name" title="企业/名称：">
+							<input bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入企业名称(必填)" />
+						</mp-cell>
+						<!-- 法人代表 -->
+						<mp-cell prop="lawPerson" title="法人代表：">
+							<input bindblur="formLawChange" data-field="lawPerson" class="weui-input" placeholder="请输入法人代表(必填)" />
+						</mp-cell>
+						<!-- 联系人姓名 -->
+						<mp-cell prop="contactName" title="联系人姓名：">
+							<input bindblur="formPersonChange" data-field="contactName" class="weui-input" placeholder="请输入联系人姓名(必填)" />
+						</mp-cell>
+						<!-- 联系人号码 -->
+						<mp-cell prop="phone" title="联系人号码：">
+							<input bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入联系人号码(必填)" />
+						</mp-cell>
+						<!-- 组织机构代码 -->
+						<mp-cell title="组织机构代码：">
+							<input bindblur="formOrgChange" class="weui-input" placeholder="请输入组织机构代码" />
+						</mp-cell>
+						<!-- 邮政编码 -->
+						<mp-cell prop="postCode" title="邮政编码：">
+							<input bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" />
+						</mp-cell>
+						<!-- 联系地址 -->
+						<mp-cell prop="address" title="联系地址：">
+							<input bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" />
+						</mp-cell>
+						<!-- 传真 -->
+						<mp-cell prop="fax" title="传 真：">
+							<input bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" />
+						</mp-cell>
+					</mp-cells>
+				</mp-form>
+				<button class="next_btn" bindtap="next_btn">下一步</button>
+			</view>
+		</view>
+	</view>
+	<!-- --------------------下一步--------------------- -->
+	<view wx:else>
+		<view class="form_title">依申请内容填写</view>
+		<view class="content_container">
+			<!-- 信息内容 -->
+			<view class="weui-cells__title">所需信息内容</view>
+			<view class="weui-cells weui-cells_after-title">
+				<view class="weui-cell">
+					<view class="weui-cell__bd">
+						<textarea class="weui-textarea" bindblur="formTextContent" placeholder="请输入文本" style="height: 8.88888888888em" maxlength='500' />
+						<view class="weui-textarea-counter">0/500</view>
+					</view>
+        </view>
+      </view>
+    </view>
+		<!-- 所需信息用途 -->
+	<view class="content_container">
+			<!-- 信息内容 -->
+		<view class="weui-cells__title">所需信息用途</view>
+		<view class="weui-cells weui-cells_after-title">
+			<view class="weui-cell">
+				<view class="weui-cell__bd">
+					<textarea class="weui-textarea" bindblur="formInfoUse" placeholder="请输入文本" style="height: 8.888888888888em" />
+					<view class="weui-textarea-counter">0/500</view>
+        </view>
+      </view>
+    </view>
+	</view>
+ <!-- 信息载体形式 -->
+		<view class="content_container">
+		<view class="weui-cells__title">所需信息的指定提供载体形式（可多选）：</view>
+		<view class="carrier_selection">
+			<view class="{{item.current?'active':''}}" bindtap="handleCarrierForm" data-index="{{index}}" wx:key="index" wx:for="{{carrierForms}}">{{item.name}}</view>
+		</view>
+		</view>
+ <!-- 获取信息方式形式 -->
+		<view class="content_container">
+		<view class="weui-cells__title">获取信息的方式（可多选）：</view>
+		<view class="carrier_selection">
+			<view class="{{item.checked?'active':''}}" bindtap="handleAccessMethod" data-index="{{index}}" wx:key="index" wx:for="{{infoMethods}}">{{item.name}}</view>
+		</view>
+		</view>
+		<!-- 提交 -->
+		<button bindtap="subReplyForm" hover-class="none">提交</button>
+	</view>
+</view>

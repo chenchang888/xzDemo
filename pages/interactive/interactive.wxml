@@ -1,0 +1,83 @@
+<view class="page-container index-wrapper">
+	<!-- 顶部滚动区域 -->
+	<view class="index-top-wrapper">
+		<!-- 政民互动 -->
+		<view class="policy-wrapper">
+			<view class="public-title">政民互动</view>
+			<view class="list">
+				<view class="list-item">
+					<view>
+						<view class="btn" bindtap="toOpinionList">意见建议箱>></view>
+						<view class="text-img-box" bindtap="toLeave">
+							<view class="l-box">
+								<text>您对宣州区人民政府的相关政策有任何意见建议，请及时反馈给我们。</text>
+							</view>
+							<view class="img-box" bindtap="editOpinion">
+								<image src="../../img/dd_20.png" mode="widthFix"></image>
+								<text>新建留言</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="list-item">
+					<view>
+						<view class="btn" bindtap="toPhotoList">随手拍>></view>
+						<view class="text-img-box" bindtap="toPhoto">
+							<view class="l-box">
+								<text>随手拍照取证，说出你的建议，我们来整改。</text>
+							</view>
+							<view class="img-box" bindtap="editPhoto">
+								<image src="../../img/camera2.png" mode="widthFix"></image>
+								<text>拍照取证</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="list-item">
+					<view>
+						<view class="btn">在线咨询>></view>
+						<view class="text-img-box" bindtap="toPhoto">
+							<view class="l-box">
+								<view>
+									<view>宣州区人民政府</view>
+									<view>咨询电话：0563-3023029</view>
+								</view>
+							</view>
+							<view class="img-box">
+								<image src="../../img/icon-bottom-bar-4.png" mode="widthFix"></image>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- logo -->
+		<view class="logo">
+			<image mode="heightFix" src="../../img/icon-logo88.png"></image>
+			<text>互联智库</text>
+		</view>
+	</view>
+	<!-- 底部导航 -->
+	<view class="index-bottom-wrapper">
+		<view class="nav-item" bindtap="toHome">
+			<image src="../../img/b.png" mode="heightFix"></image>
+			<text>首页</text>
+		</view>
+		<!-- <view class="nav-item" bindtap="toPhotoList">
+			<image src="../../img/d.png" mode="heightFix"></image>
+			<text>随手拍</text>
+		</view> -->
+		<view class="nav-item" bindtap="toInteractive">
+			<image src="../../img/icon-lianxi.png" mode="heightFix"></image>
+			<text>政民互动</text>
+		</view>
+		<view class="nav-item" bindtap="gotoMyReply">
+			<image src="../../img/person_reply.png" mode="heightFix"></image>
+			<text>依申请公开</text>
+		</view>
+		<view class="nav-item" bindtap="gotoPerson">
+			<image src="../../img/d-1.png" mode="heightFix"></image>
+			<text>个人中心</text>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,53 @@
+<view class="page-container news-wrapper">
+
+	<!-- banner -->
+	<view class="banner" style="height:170px;">
+		<image src="../../img/bg3.png" mode="widthFix"></image>
+		<view class="search-box">
+			<view class="search-input">
+				<image src="../../img/search.png" mode="heightFix"></image>
+				<input bindinput="getInputContent" placeholder="请输入政策关键词搜索"></input>
+			</view>
+			<view class="search-btn" bindtap="search">点击查询</view>
+		</view>
+	</view>
+
+	<!-- 最新发布 -->
+	<view class="public-title news-bar" style="height:52px;">
+		<text>最新发布</text>
+		<view class="select" style="right: 240rpx;">
+			<picker bindchange="changeType" value='{{index}}' range="{{typeArray}}" range-key="{{'name'}}">
+				<view class="picker">
+					{{typeName}}
+				</view>
+			</picker>
+			<image src="../../img/arrow-down.png" mode="widthFix"></image>
+		</view>
+		<view class="select">
+			<picker bindchange="bindPickerChange" value='{{index}}' range="{{array}}" range-key="{{'name'}}">
+				<view class="picker">
+					{{name}}
+				</view>
+			</picker>
+			<image src="../../img/arrow-down.png" mode="widthFix"></image>
+		</view>
+	</view>
+	<scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="nearBottom" style='height:{{scroll_height}}px'>
+		<!-- 列表 -->
+		<view class="news-list" wx:if="{{policyList.length > 0}}">
+			<view class="list-item" wx:for="{{policyList}}" data-id="{{item.id}}" wx:key="id" data-key="{{item.id}}" bindtap="toDetail">
+				<view class="title">
+					<view class="title-item">{{item.title}}</view>
+					<view class="detail">{{item.colName}}>></view>
+				</view>
+				<view class="bottom-bar">
+					<text>{{item.source}}</text>
+					<text>{{item.releaseDate}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="news-list" wx:else>
+			<view style="text-align: center;margin-top: 20px;color:#1D9CFE">暂无数据</view>
+		</view>
+	</scroll-view>
+</view>

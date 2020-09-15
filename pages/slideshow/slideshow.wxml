@@ -1,0 +1,107 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="page-container news-detail-wrapper">
+  <!-- 基础信息 -->
+  <view class="basic-info">
+    <view class="title">
+      {{title}}
+    </view>
+    <view class="bottom-box">
+      <text>{{source}}</text>
+      <text>{{time}}</text>
+    </view>
+  </view>
+
+  <view class="scroll-wrapper">
+
+    <!-- 文章 -->
+    <view class="article-wrapper">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+
+    <!-- 附件、政策解读 -->
+    <!-- <view class="public-list-text">
+			<view class="title">附件</view>
+			<view class="list">
+				<view class="list-item">1.市级应急广播项目、县级应急广播及大喇叭系统项目</view>
+				<view class="list-item">2.市级应急广播项目、县级应急广播及大喇叭系统名单</view>
+			</view>
+		</view> -->
+
+    <!-- <view class="public-list-text">
+			<view class="title">政策解读</view>
+			<view class="text">宣州区人民政府办公室关于印发宣州区扎实推进应急广播体系建设实施方案的通知</view>
+		</view> -->
+
+    <!-- 点赞、分享 -->
+    <view class="public-like-share">
+      <view class="item">
+        <view class="img-box" bindtap="clickLike">
+          <image hidden="{{isClickedLike}}" class="like" src="../../img/dianzan-gray.png" mode="widthFix"></image>
+          <image hidden="{{!isClickedLike}}" class="like" src="../../img/dianzan-yellow.png" mode="widthFix"></image>
+        </view>
+        <text><text>{{num}}</text></text>
+      </view>
+
+      <button open-type="share">
+        <view class="item">
+          <image src="../../img/dgsga_03.png" mode="widthFix"></image>
+          <text>分享</text>
+        </view>
+      </button>
+    </view>
+
+    <!-- 评价 -->
+    <view class="evaluation">
+      <view class="title">评价<text wx:if="evaluationList.length  > 0">({{evaluationList.length}})</text></view>
+      <view wx:if="{{evaluationList.length  > 0 }}" style="height:200px;overflow-y: auto;-webkit-overflow-scrolling: touch;">
+        <view class="empty-text"  wx:key="index"  wx:for="{{evaluationList}}" data-title="{{item}}" style="text-align: left;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;margin-left: 14px;">{{item}}
+        </view>
+        <!-- <view class="empty-text" style="text-align: left;">{{evaluation}}</view> -->
+      </view>
+      <view wx:else>
+        <view class="empty-status">
+          <image src="../../img/dgsga_07.png" mode="widthFix"></image>
+        </view>
+        <view class="empty-text">暂无观点，快来发表观点</view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 底部 -->
+  <view class="bottom-bar">
+    <view class="bar-item" bindtap="showMsg">
+      <image src="../../img/a2.png" mode="heightFix"></image>
+      <text>评价</text>
+    </view>
+    <view class="bar-item" bindtap="clickCollect">
+      <view class="img-box">
+        <image hidden="{{showCollect}}" src="../../img/star0.png" mode="heightFix"></image>
+        <image hidden="{{!showCollect}}" src="../../img/star1.png" mode="heightFix"></image>
+      </view>
+      <text>收藏</text>
+    </view>
+    <button open-type="share">
+      <view class="bar-item">
+        <image src="../../img/a3.png" mode="heightFix"></image>
+        <text>分享</text>
+      </view>
+    </button>
+  </view>
+  <!-- 评价 -->
+  <view class="mask" wx:if="{{_showMsg}}">
+    <view class="box" catchtap>
+      <view class="h2">政策评价</view>
+      <view class="content">
+        <view class="textarea">
+          <textarea disabled="{{!operation}}" style="width: 270px;" value="{{evaluation}}" placeholder="评价内容……" bindinput="getInputContent"></textarea>
+        </view>
+        <view class="btn">
+          <view bindtap="closeMsg">取消</view>
+          <view style="background-color: #2295FA; color: #FFF;" wx:if="{{operation}}" bindtap="setEvaluation">提交</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

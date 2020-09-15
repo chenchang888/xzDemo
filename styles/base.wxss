@@ -1,0 +1,36 @@
+/* 初始样式 */
+view,
+image,
+swiper,
+page,
+text,
+textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+image {
+  width: 100%;
+}
+/* 主题颜色 */
+page{
+  --themeColor:#2295fa;
+}
+page {
+  width: 100%;
+  height: 100%;
+  padding: 20rpx;
+  font-size: 30rpx;
+  background-color: #f8f8f8;
+}
+.container {
+  width: 100%;
+  margin-bottom: 20rpx;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+.container_box {
+  width: 100%;
+  padding: 15rpx;
+  overflow: hidden;
+}

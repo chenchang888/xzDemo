@@ -1,0 +1,35 @@
+<view class="page-container person-wrapper">
+  <view class="h1">个人中心</view>
+
+  <view class="person-info" wx:if="{{!hasUserInfo}}">
+    <view class="img-box">
+      <image src="../../img/person-center-2.png"  mode="widthFix"></image>
+    </view>
+    <view class="name">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> {{userName}} </button>
+    </view>
+  </view>
+    <view class="person-info" wx:else>
+    <view class="img-box">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+    </view>
+    <view class="name">{{userInfo.nickName}}</view>
+  </view>
+  <view class="list">
+    <view class="list-item" bindtap="toCollection">
+      <view class="left-box">
+        <image src="../../img/shoucang-2.png" mode="widthFix"></image>
+        <text>我的收藏</text>
+      </view>
+        <image src="../../img/left-arrow.png" mode="widthFix"></image>
+    </view>
+    <!-- 依申请 -->
+    <navigator class="list-item" url="/pages/myReply/myReply">
+      <view class="left-box">
+        <image src="../../img/my_reply.png" mode="widthFix"></image>
+        <text>我的依申请</text>
+      </view>
+        <image src="../../img/left-arrow.png" mode="widthFix"></image>
+    </navigator>
+  </view>
+</view>

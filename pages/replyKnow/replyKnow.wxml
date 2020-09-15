@@ -1,0 +1,13 @@
+<view class="know_container">
+	<view class="container">
+		<view class="container_box">
+			<view class="know_title">在线申请需知</view>
+			<view class="know_text">
+				<text class="content_text" space="nbsp">{{content}}</text>
+			</view>
+			<navigator url="/pages/replyForm/replyForm">
+				<button hover-stop-propagation="true" disabled="{{btn}}" class="{{btn? '':'knom_btn'}}">确认 <text class="{{flag?'display_flag':''}}">({{time}}s)</text></button>
+			</navigator>
+		</view>
+	</view>
+</view>

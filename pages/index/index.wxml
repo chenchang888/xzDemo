@@ -1,0 +1,140 @@
+<view class="page-container index-wrapper">
+  <!-- 顶部滚动区域 -->
+  <view class="index-top-wrapper">
+    <!-- 顶部banner -->
+    <view class="top-banner">
+      <image src="../../img/banner.jpg" mode="widthFix"></image>
+      <view class="feedback" bindtap="toOption">
+        <image src="../../img/email_03.png" mode="heightFix"></image>
+        <text>意见收集</text>
+      </view>
+    </view>
+    <!-- 四块 -->
+    <view class="four-item-wrapper">
+      <view class="item-box">
+        <view class="item" bindtap="toDetail" wx:for="{{project}}" data-id="{{item.policyId}}" 
+        wx:key="id" data-key="{{item.id}}">
+          <image src="{{item.iconPath}}" mode="widthFix"></image>
+          <text>{{item.keyword}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 功能列表 -->
+    <view class="function-list">
+      <view class="top-bar">
+        <view data-flag="theme" bindtap="getThemeService" class="left-item {{themeService === 'theme' ? 'active' : ''}}">企业政策</view>
+        <view data-flag="service" bindtap="getThemeService" class="right-item {{themeService === 'service' ? 'active' : ''}}">民生政策</view>
+      </view>
+      <!-- 列表 -->
+      <view class="list-wrapper">
+        <view class="list" wx:if="{{themeService === 'theme'}}">
+          <view class="list-item" wx:for="{{theme}}" bindtap="toPolicyList" data-id="{{item.id}}" data-name="{{item.name}}" wx:key="id" data-key="{{item.id}}">
+            <view class="img-box">
+              <image src="{{item.icon}}" mode="widthFix"></image>
+            </view>
+            <text>{{item.name}}</text>
+          </view>
+          <view class="list-item" bindtap="toPolicyList" wx:if="{{theme.length > 0}}">
+            <view class="img-box">
+              <image src="../../img/more.png" mode="widthFix"></image>
+            </view>
+            <text>更多政策</text>
+          </view>
+        </view>
+        <view class="list" wx:else>
+          <view class="list-item person" bindtap="toPolicyList" data-id="{{item.id}}"  data-url="{{item.url}}" wx:for="{{matters}}" wx:key="id" data-key="{{item.id}}">
+            <view class="img-box">
+              <image src="{{item.icon}}" mode="widthFix"></image>
+            </view>
+            <text>{{item.title}}</text>
+          </view>
+          <view class="list-item" bindtap="toPolicyList" wx:if="{{theme.length > 0}}">
+            <view class="img-box">
+              <image src="../../img/more.png" mode="widthFix"></image>
+            </view>
+            <text>更多政策</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 政府直播 -->
+    <!-- <view class="video-wrapper">
+      <view class="public-title">政府直播</view>
+      <view class="video-box">
+        <image src="../../img/video-bg.jpg"></image>
+        <view class="bottom-bar">政府会议直播</view>
+      </view>
+    </view> -->
+
+    <!-- 政民互动 -->
+    <view class="policy-wrapper">
+      <view class="public-title">政民互动</view>
+
+      <view class="list">
+        <view class="list-item">
+          <view>
+            <view class="btn">留言建议箱>></view>
+            <view class="text-img-box" bindtap="toLeave">
+              <view class="l-box" >
+                <image src="../../img/dd_23.png" mode="widthFix"></image>
+                <text>输入您对宣州区政府相关政策的意见和建议</text>
+              </view>
+              <image src="../../img/dd_20.png" mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+        <view class="list-item">
+          <view>
+            <view class="btn">拍照取证>></view>
+            <view class="text-img-box"  bindtap="toPhoto">
+              <view class="l-box">
+                <image src="../../img/dd_23.png" mode="widthFix"></image>
+                <text>随手拍照取证，说出你的建议，我们来取证</text>
+              </view>
+              <image src="../../img/camera2.png" mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+     <view style="line-height: 26px">
+      <image style="height: 20px;width: 100px;margin-left:38%;margin-top:7px;" src="../../img/log.png"></image>
+     </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class="index-bottom-wrapper">
+    <view class="nav-item" bindtap="reflash">
+      <image src="../../img/b.png" mode="heightFix"></image>
+      <text>首页</text>
+    </view>
+    <view class="nav-item" bindtap="toPhotoList">
+      <image src="../../img/d.png" mode="heightFix"></image>
+      <text>随手拍</text>
+    </view>
+    <view class="nav-item" bindtap="showMask">
+      <image src="../../img/c.png" mode="heightFix"></image>
+      <text>在线咨询</text>
+    </view>
+    <view class="nav-item" bindtap="gotoPerson">
+      <image src="../../img/d-1.png" mode="heightFix"></image>
+      <text>个人中心</text>
+    </view> 
+  </view>
+  <!-- 咨询 -->
+  <view class="mask" catchtap="closeMask" wx:if="{{_showMask}}">
+    <view class="box" catchtap>
+      <view class="h2">在线咨询</view>
+      <view class="ul">
+        <view class="li">
+          <view class="label">咨询部门</view>
+          <text>宣州区人民政府</text>
+        </view>
+        <view class="li">
+          <view class="label">咨询电话</view>
+          <text bindtap="call">0563-3023029</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

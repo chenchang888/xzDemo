@@ -1,0 +1,79 @@
+<view class="page-container write-opinion-wrapper">
+	<!-- 顶部 -->
+	<view class="opinion-notice">
+		<view class="title">随手拍须知</view>
+		<view class="ol">
+			<view class="ol-item">1、将你所见所得，通过视频或者照片的形式都可以发送给我们。</view>
+			<view class="ol-item">2、收到网民留言后，一般性问题将在7个工作日内反馈处理意见，情况较为复杂的将在15个工作日内反馈处理意见。</view>
+			<view class="ol-item">3、所拍摄的内容必须符合法律法规，如有违反，我们保留相关追究权利。</view>
+		</view>
+	</view>
+
+	<!-- 装饰线 -->
+	<view class="line"></view>
+
+	<!-- 填写 -->
+	<view class="write-box">
+		<!-- 上传 -->
+		<view class="title upload">
+			<text class="red-star">*</text><text class="red">照片/视频：</text>
+			<view class="image-upload" bindtap="chooseMedia">
+				<image src="../../img/camera.png" mode="heightFix"></image>
+				请选择文件上传
+			</view>
+		</view>
+      <!-- 上传列表 -->
+		<view hidden="{{!tempFilesList.length}}" class="upload-list">
+			<view class="list-item" wx:for="{{tempFilesList}}" wx:key="index">
+				<view class="file-name">{{index + 1}}.{{item.name}}</view>
+				<view class="operation">
+               <text class="status">上传完成</text>
+               <text bindtap="delFile" data-index="{{index}}" class="del">×</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="form-item">
+			<text class="label">
+            <text class="red-star">*</text>你的姓名：
+			</text>
+			<view class="input-box">
+				<input placeholder-class="placeholder-class" placeholder="请输入您的姓名" bindblur="addName"></input>
+			</view>
+		</view>
+
+		<view class="form-item">
+			<text class="label">
+            <text class="red-star">*</text>联系方式：
+			</text>
+			<view class="input-box">
+				<input placeholder-class="placeholder-class" placeholder="请输入您的联系方式" bindblur="addContact"></input>
+			</view>
+		</view>
+
+		<view class="form-item">
+			<text class="label">
+            <text class="red-star">*</text>标　　题：
+			</text>
+			<view class="input-box">
+				<input placeholder-class="placeholder-class" placeholder="请输入标题" bindblur="addTitle"></input>
+			</view>
+		</view>
+
+		<view class="form-item">
+			<text class="label">
+            <text class="red-star" >*</text>内　　容：({{content.length}}/1000)
+			</text>
+		</view>
+
+		<view class="textarea-box">
+			<textarea maxlength="1000" placeholder-class="placeholder-class" placeholder="请输入内容" bindinput="addContent">
+			</textarea>
+		</view>
+
+		<view class="btn-box">
+			<view bindtap="back">取消</view>
+			<view bindtap="submitInfo">提交</view>
+		</view>
+	</view>
+</view>

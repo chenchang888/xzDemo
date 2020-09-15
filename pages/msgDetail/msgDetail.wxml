@@ -1,0 +1,28 @@
+<view class="page-container msg-detail-wrapper">
+	<!-- 一级标题 -->
+	<view class="h1">留言详情页
+	<button wx:if="{{showStatus}}" bindtap="delMessage" style="width: 52px; margin: 0 6px; padding: 2px 4px; font-weight: normal; font-size: 14px; background: #ff3300; color: #fff;float:right;">删除</button>
+	</view>
+	<!-- 标题 -->
+	<view class="title-box">
+		<view class="title">标题：{{message.title}}</view>
+		<view class="time-status">
+			<text>留言时间：{{message.createTime}}</text>
+			<text>回复状态：{{status}}</text>
+		</view>
+	</view>
+	<!-- 内容 -->
+	<view class="title-box content">
+		<view class="title">留言内容：</view>
+		<view class="p">
+			{{message.content}}
+		</view>
+	</view>
+
+	<!-- 回复内容 -->
+	<view class="reply-box">
+		<view class="title">回复内容:</view>
+		<view class="content">{{message.reply}}</view>
+		<view class="time">{{message.replyTime}}</view>
+	</view>
+</view>
