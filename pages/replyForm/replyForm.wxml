@@ -108,7 +108,7 @@
 				<view class="weui-cell">
 					<view class="weui-cell__bd">
 						<textarea class="weui-textarea" bindblur="formTextContent" placeholder="请输入文本" style="height: 8.88888888888em" maxlength='500' />
-						<view class="weui-textarea-counter">0/500</view>
+						<!-- <view class="weui-textarea-counter">0/500</view> -->
 					</view>
         </view>
       </view>
@@ -120,8 +120,8 @@
 		<view class="weui-cells weui-cells_after-title">
 			<view class="weui-cell">
 				<view class="weui-cell__bd">
-					<textarea class="weui-textarea" bindblur="formInfoUse" placeholder="请输入文本" style="height: 8.888888888888em" />
-					<view class="weui-textarea-counter">0/500</view>
+					<textarea class="weui-textarea" bindblur="formInfoUse" placeholder="请输入文本" style="height: 8.888888888888em" maxlength='500'/>
+					<!-- <view class="weui-textarea-counter">0/500</view> -->
         </view>
       </view>
     </view>
