@@ -1,8 +1,8 @@
 @import "/styles/base.wxss";
 
-input,
+.inputFontSize,
 picker {
-  font-size: 28rpx;
+  font-size: 30rpx;
 }
 
 .form_content {

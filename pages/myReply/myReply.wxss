@@ -1,4 +1,7 @@
 @import "/styles/base.wxss";
+.reply_content{
+  color: #555;
+}
 .reply_time{
   display: flex;
   justify-content: space-between;

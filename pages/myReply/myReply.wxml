@@ -20,7 +20,6 @@
 				</view>
 			</view>
 		</view>
-
 	</view>
 	<view class="container" wx:else>
 		<view class="container_box">

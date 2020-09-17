@@ -96,6 +96,34 @@
 					"id": -1,
 					"name": "pages/msgList/msgList",
 					"pathName": "pages/msgList/msgList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/interactive/interactive",
+					"pathName": "pages/interactive/interactive",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/leaveMessage/leaveMessage",
+					"pathName": "pages/leaveMessage/leaveMessage",
 					"scene": null
 				}
 			]

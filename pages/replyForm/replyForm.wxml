@@ -13,11 +13,11 @@
 					<mp-cells ext-class="my-cells">
 						<!-- 姓名 -->
 						<mp-cell prop="name" title="姓名/名称：">
-							<input value="{{personalFormData.name}}" bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入您的姓名/名称(必填)"/>
+							<input value="{{personalFormData.name}}" bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入您的姓名/名称(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 工作单位 -->
 						<mp-cell prop="unit" title="工作单位：">
-							<input value="{{personalFormData.unit}}" bindblur="formCompanyChange" data-field="unit" class="weui-input" placeholder="请输入您的工作单位(必填)" />
+							<input value="{{personalFormData.unit}}" bindblur="formCompanyChange" data-field="unit" class="weui-input" placeholder="请输入您的工作单位(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 证件名称 -->
 						<view prop="cardType" class="weui-cell weui-cell_select">
@@ -32,27 +32,27 @@
 						</view>
 						<!-- 证件号码 -->
 						<mp-cell prop="cardCode" title="证件号码：">
-							<input value="{{personalFormData.cardCode}}" bindblur="formIdNumberChange" data-field="cardCode" class="weui-input" placeholder="请输入您的证件号码(必填)" />
+							<input value="{{personalFormData.cardCode}}" bindblur="formIdNumberChange" data-field="cardCode" class="weui-input" placeholder="请输入您的证件号码(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 电子邮箱 -->
 						<mp-cell prop="email" title="电子邮箱：">
-							<input value="{{personalFormData.email}}" bindblur="formEmailChange" data-field="email" class="weui-input" placeholder="请输入您的电子邮箱(必填)" />
+							<input value="{{personalFormData.email}}" bindblur="formEmailChange" data-field="email" class="weui-input" placeholder="请输入您的电子邮箱(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 联系电话 -->
 						<mp-cell prop="phone" title="联系电话：">
-							<input value="{{personalFormData.phone}}" bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入您的联系电话(必填)" />
+							<input value="{{personalFormData.phone}}" bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入您的联系电话(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 邮政编码 -->
 						<mp-cell prop="postCode" title="邮政编码：">
-							<input value="{{personalFormData.postCode}}" bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" />
+							<input value="{{personalFormData.postCode}}" bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 联系地址 -->
 						<mp-cell prop="address" title="联系地址：">
-							<input value="{{personalFormData.address}}" bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" />
+							<input value="{{personalFormData.address}}" bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 传真 -->
 						<mp-cell prop="fax" title="传 真：">
-							<input value="{{personalFormData.fax}}" bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" />
+							<input value="{{personalFormData.fax}}" bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 					</mp-cells>
 				</mp-form>
@@ -62,35 +62,35 @@
 					<mp-cells ext-class="my-cells">
 						<!-- 企业名称 -->
 						<mp-cell prop="name" title="企业/名称：">
-							<input bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入企业名称(必填)" />
+							<input bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入企业名称(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 法人代表 -->
 						<mp-cell prop="lawPerson" title="法人代表：">
-							<input bindblur="formLawChange" data-field="lawPerson" class="weui-input" placeholder="请输入法人代表(必填)" />
+							<input bindblur="formLawChange" data-field="lawPerson" class="weui-input" placeholder="请输入法人代表(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 联系人姓名 -->
 						<mp-cell prop="contactName" title="联系人姓名：">
-							<input bindblur="formPersonChange" data-field="contactName" class="weui-input" placeholder="请输入联系人姓名(必填)" />
+							<input bindblur="formPersonChange" data-field="contactName" class="weui-input" placeholder="请输入联系人姓名(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 联系人号码 -->
 						<mp-cell prop="phone" title="联系人号码：">
-							<input bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入联系人号码(必填)" />
+							<input bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入联系人号码(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 组织机构代码 -->
 						<mp-cell title="组织机构代码：">
-							<input bindblur="formOrgChange" class="weui-input" placeholder="请输入组织机构代码" />
+							<input bindblur="formOrgChange" class="weui-input" placeholder="请输入组织机构代码" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 邮政编码 -->
 						<mp-cell prop="postCode" title="邮政编码：">
-							<input bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" />
+							<input bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 联系地址 -->
 						<mp-cell prop="address" title="联系地址：">
-							<input bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" />
+							<input bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 						<!-- 传真 -->
 						<mp-cell prop="fax" title="传 真：">
-							<input bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" />
+							<input bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" placeholder-class="inputFontSize"/>
 						</mp-cell>
 					</mp-cells>
 				</mp-form>
@@ -107,8 +107,7 @@
 			<view class="weui-cells weui-cells_after-title">
 				<view class="weui-cell">
 					<view class="weui-cell__bd">
-						<textarea class="weui-textarea" bindblur="formTextContent" placeholder="请输入文本" style="height: 8.88888888888em" maxlength='500' />
-						<!-- <view class="weui-textarea-counter">0/500</view> -->
+						<textarea class="weui-textarea" bindblur="formTextContent" placeholder="请输入文本" style="height: 8.88em" maxlength='-1' placeholder-class="inputFontSize"/>
 					</view>
         </view>
       </view>
@@ -120,8 +119,7 @@
 		<view class="weui-cells weui-cells_after-title">
 			<view class="weui-cell">
 				<view class="weui-cell__bd">
-					<textarea class="weui-textarea" bindblur="formInfoUse" placeholder="请输入文本" style="height: 8.888888888888em" maxlength='500'/>
-					<!-- <view class="weui-textarea-counter">0/500</view> -->
+					<textarea class="weui-textarea" bindblur="formInfoUse" placeholder="请输入文本" style="height: 8.88em" maxlength='-1' placeholder-class="inputFontSize"/>
         </view>
       </view>
     </view>

@@ -8,31 +8,10 @@
 			<view class="ol-item">3、收到网民留言后，一般性问题将在7个工作日内反馈处理意见，情况较为复杂的将在15个工作日内反馈处理意见。</view>
 		</view>
 	</view>
-
 	<!-- 装饰线 -->
 	<view class="line"></view>
-
 	<!-- 填写 -->
 	<view class="write-box">
-		<!-- 上传 -->
-		<!-- <view class="title upload">
-			<text class="red-star">*</text><text class="red">照片/视频：</text>
-			<view class="image-upload" bindtap="chooseMedia">
-				<image src="../../img/camera.png" mode="heightFix"></image>
-				请选择文件上传
-			</view>
-		</view> -->
-		<!-- 上传列表 -->
-		<!-- <view hidden="{{!tempFilesList.length}}" class="upload-list">
-			<view class="list-item" wx:for="{{tempFilesList}}" wx:key="index">
-				<view class="file-name">{{index + 1}}.{{item.name}}</view>
-				<view class="operation">
-					<text class="status">上传完成</text>
-					<text bindtap="delFile" data-index="{{index}}" class="del">×</text>
-				</view>
-			</view>
-		</view> -->
-
 		<view class="form-item">
 			<text class="label">
             <text class="red-star">*</text>留言类型：

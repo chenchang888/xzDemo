@@ -6,13 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 显示内容模块有无
     flag: true,
     // 回复信息
     list: [],
     //当前页
     pageNum: 1,
     //分页大小
-    pageSize: 10,
+    pageSize: 0,
     // 总页数
     pages: 0,
     //总条数
@@ -20,9 +21,13 @@ Page({
   },
   // 查看是否授权登录
   grantAuthorization() {
+    const that = this
     wx.getSetting({
       success(res) {
         if (!res.authSetting['scope.userInfo']) {
+          that.setData({
+            flag:false
+          })
           // 未登录弹窗提示
           wx.showModal({
             title: '提示',
@@ -35,7 +40,7 @@ Page({
                 })
               } else if (res.cancel) {
                 wx.navigateTo({
-                  url: '../person/person'
+                  url: '../home/home'
                 })
               }
             }
@@ -45,12 +50,14 @@ Page({
       }
     })
   },
+  // 获取依申请内容
   async getPublicList() {
     const params = {
       pageNo: this.data.pageNum,
       pageSize: this.data.pageSize
     }
     const res = await WxApi.getPublicList(params)
+    res.list.length === 0 ? this.setData({ flag:false}):this.setData({ flag:true})
     // 初次为第一页数据，后续下拉触底在原数组追加新加载的新一页数组
     const arrList = this.data.list.push.apply(this.data.list, res.list)
     this.setData({

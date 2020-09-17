@@ -2,7 +2,6 @@
   "pages": [
     "pages/home/home",
     "pages/interactive/interactive",
-    "pages/index/index",
     "pages/out/out",
     "pages/slideshow/slideshow",
     "pages/msgList/msgList",

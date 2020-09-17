@@ -68,10 +68,6 @@
 			<image src="../../img/b.png" mode="heightFix"></image>
 			<text>首页</text>
 		</view>
-		<!-- <view class="nav-item" bindtap="toPhotoList">
-			<image src="../../img/d.png" mode="heightFix"></image>
-			<text>随手拍</text>
-		</view> -->
 		<view class="nav-item" bindtap="toInteractive">
 			<image src="../../img/icon-lianxi.png" mode="heightFix"></image>
 			<text>政民互动</text>

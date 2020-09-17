@@ -17,23 +17,7 @@
     <!-- 文章 -->
     <view class="article-wrapper">
      <rich-text style="font-size:16px;line-height:2em；" nodes="{{content}}"></rich-text>
-      <!-- <template is="wxParse" data="{{wxParseData:article.nodes}}" /> -->
     </view>
-
-    <!-- 附件、政策解读 -->
-    <!-- <view class="public-list-text">
-			<view class="title">附件</view>
-			<view class="list">
-				<view class="list-item">1.市级应急广播项目、县级应急广播及大喇叭系统项目</view>
-				<view class="list-item">2.市级应急广播项目、县级应急广播及大喇叭系统名单</view>
-			</view>
-		</view> -->
-
-    <!-- <view class="public-list-text">
-			<view class="title">政策解读</view>
-			<view class="text">宣州区人民政府办公室关于印发宣州区扎实推进应急广播体系建设实施方案的通知</view>
-		</view> -->
-
     <!-- 点赞、分享 -->
     <view class="public-like-share">
       <view class="item">
@@ -58,7 +42,6 @@
       <view wx:if="{{evaluationList.length  > 0 }}" style="height:200px;overflow-y: auto;-webkit-overflow-scrolling: touch;">
         <view class="empty-text"  wx:for="{{evaluationList}}" title="{{item}}" style="text-align: left;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;margin-left: 14px;">{{item}}
         </view>
-        <!-- <view class="empty-text" style="text-align: left;">{{evaluation}}</view> -->
       </view>
       <view wx:else>
         <view class="empty-status">
