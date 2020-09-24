@@ -2,7 +2,6 @@ const Config = require('../utils/config.js');
 const API_BASE_URL = Config.domain;
 const app = getApp();
 
-
 const request = (url, method, params, pathId) => {
   let _path = pathId ? '/' + pathId : ''; //路径ID
   let _url = API_BASE_URL + url + _path;

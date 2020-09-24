@@ -67,6 +67,18 @@ App({
         }
       }
     })
+    // 引入字体
+    wx.loadFontFace({
+      global:true,
+      family: 'MicrosoftYaHei',
+      source: 'url("https://xzqxcx.ahegov.com/static/css/appletfont/Microsoft-YaHei.ttf")',
+      success(e) {
+        console.log(e, '动态加载字体成功')
+      },
+      fail(e) {
+        console.log(e, '动态加载字体失败')
+      },
+    })
   },
   globalData: {
     userInfo: null,

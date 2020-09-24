@@ -13,11 +13,11 @@
 					<mp-cells ext-class="my-cells">
 						<!-- 姓名 -->
 						<mp-cell prop="name" title="姓名/名称：">
-							<input value="{{personalFormData.name}}" bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入您的姓名/名称(必填)" placeholder-class="inputFontSize"/>
+							<input value="{{personalFormData.name}}" bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入您的姓名/名称(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 工作单位 -->
 						<mp-cell prop="unit" title="工作单位：">
-							<input value="{{personalFormData.unit}}" bindblur="formCompanyChange" data-field="unit" class="weui-input" placeholder="请输入您的工作单位(必填)" placeholder-class="inputFontSize" />
+							<input value="{{personalFormData.unit}}" bindblur="formCompanyChange" data-field="unit" class="weui-input" placeholder="请输入您的工作单位" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 证件名称 -->
 						<view prop="cardType" class="weui-cell weui-cell_select">
@@ -32,27 +32,42 @@
 						</view>
 						<!-- 证件号码 -->
 						<mp-cell prop="cardCode" title="证件号码：">
-							<input value="{{personalFormData.cardCode}}" bindblur="formIdNumberChange" data-field="cardCode" class="weui-input" placeholder="请输入您的证件号码(必填)" placeholder-class="inputFontSize"/>
+							<input type="number" value="{{personalFormData.cardCode}}" bindblur="formIdNumberChange" data-field="cardCode" class="weui-input" placeholder="请输入您的证件号码(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 电子邮箱 -->
 						<mp-cell prop="email" title="电子邮箱：">
-							<input value="{{personalFormData.email}}" bindblur="formEmailChange" data-field="email" class="weui-input" placeholder="请输入您的电子邮箱(必填)" placeholder-class="inputFontSize"/>
+							<input value="{{personalFormData.email}}" bindblur="formEmailChange" data-field="email" class="weui-input" placeholder="请输入您的电子邮箱" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 联系电话 -->
 						<mp-cell prop="phone" title="联系电话：">
-							<input value="{{personalFormData.phone}}" bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入您的联系电话(必填)" placeholder-class="inputFontSize"/>
+							<input type="number" value="{{personalFormData.phone}}" bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入您的联系电话(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 邮政编码 -->
 						<mp-cell prop="postCode" title="邮政编码：">
-							<input value="{{personalFormData.postCode}}" bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" placeholder-class="inputFontSize"/>
+							<input type="number" value="{{personalFormData.postCode}}" bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码" placeholder-class="inputFontSize" />
 						</mp-cell>
-						<!-- 联系地址 -->
-						<mp-cell prop="address" title="联系地址：">
-							<input value="{{personalFormData.address}}" bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" placeholder-class="inputFontSize"/>
+						<!-- 邮寄地址 -->
+						<mp-cell prop="address" title="邮寄地址：">
+							<input value="{{personalFormData.address}}" bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的邮寄地址(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 传真 -->
 						<mp-cell prop="fax" title="传 真：">
-							<input value="{{personalFormData.fax}}" bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" placeholder-class="inputFontSize"/>
+							<input value="{{personalFormData.fax}}" bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真" placeholder-class="inputFontSize" />
+						</mp-cell>
+						<!-- 身份证 -->
+						<mp-cell>
+							<view>请上传您的身份证照片(正反面 必选)</view>
+							<view class="form_img-contain">
+								<view class=".img_item {{src===''?'img':''}}" wx:for="{{personalImg}}" wx:key="*this">
+									<image class="img_item" src="{{item}}"></image>
+									<view class="icon_container" bindtap="deleteCardImg">
+										<icon class="icon-small" data-index="{{index}}" type="cancel" size="30"></icon>
+									</view>
+								</view>
+								<view class="{{personalImg.length>=2?'display':'choose_img-box'}}" bindtap="chooseCardImg">
+									<image src="../../img/add_img.png" class="choose_img"></image>
+								</view>
+							</view>
 						</mp-cell>
 					</mp-cells>
 				</mp-form>
@@ -62,35 +77,50 @@
 					<mp-cells ext-class="my-cells">
 						<!-- 企业名称 -->
 						<mp-cell prop="name" title="企业/名称：">
-							<input bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入企业名称(必填)" placeholder-class="inputFontSize"/>
+							<input bindblur="formNameChange" data-field="name" class="weui-input" placeholder="请输入企业名称(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 法人代表 -->
 						<mp-cell prop="lawPerson" title="法人代表：">
-							<input bindblur="formLawChange" data-field="lawPerson" class="weui-input" placeholder="请输入法人代表(必填)" placeholder-class="inputFontSize"/>
+							<input bindblur="formLawChange" data-field="lawPerson" class="weui-input" placeholder="请输入法人代表(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 联系人姓名 -->
 						<mp-cell prop="contactName" title="联系人姓名：">
-							<input bindblur="formPersonChange" data-field="contactName" class="weui-input" placeholder="请输入联系人姓名(必填)" placeholder-class="inputFontSize"/>
+							<input bindblur="formPersonChange" data-field="contactName" class="weui-input" placeholder="请输入联系人姓名(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 联系人号码 -->
 						<mp-cell prop="phone" title="联系人号码：">
-							<input bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入联系人号码(必填)" placeholder-class="inputFontSize"/>
+							<input type="number" bindblur="formPhoneChange" data-field="phone" class="weui-input" placeholder="请输入联系人号码(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 组织机构代码 -->
 						<mp-cell title="组织机构代码：">
-							<input bindblur="formOrgChange" class="weui-input" placeholder="请输入组织机构代码" placeholder-class="inputFontSize"/>
+							<input bindblur="formOrgChange" class="weui-input" placeholder="请输入组织机构代码" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 邮政编码 -->
 						<mp-cell prop="postCode" title="邮政编码：">
-							<input bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码(必填)" placeholder-class="inputFontSize"/>
+							<input type="number" bindblur="formPostalChange" data-field="postCode" class="weui-input" placeholder="请输入您的邮政编码" placeholder-class="inputFontSize" />
 						</mp-cell>
-						<!-- 联系地址 -->
-						<mp-cell prop="address" title="联系地址：">
-							<input bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的联系地址(必填)" placeholder-class="inputFontSize"/>
+						<!-- 邮寄地址 -->
+						<mp-cell prop="address" title="邮寄地址：">
+							<input bindblur="formAddressChange" data-field="address" class="weui-input" placeholder="请输入您的邮寄地址(必填)" placeholder-class="inputFontSize" />
 						</mp-cell>
 						<!-- 传真 -->
 						<mp-cell prop="fax" title="传 真：">
-							<input bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真(必填)" placeholder-class="inputFontSize"/>
+							<input bindblur="formFaxChange" data-field="fax" class="weui-input" placeholder="请输入您的传真" placeholder-class="inputFontSize" />
+						</mp-cell>
+						<!-- 上传营业执照 -->
+						<mp-cell>
+							<view>请上传营业执照等有效证件(必选)</view>
+							<view class="form_img-contain">
+								<view class=".img_item {{src===''?'img':''}}" wx:for="{{enterpriseImg}}" wx:key="*this">
+									<image class="img_item" src="{{item}}"></image>
+									<view class="icon_container" bindtap="deleteBusinessImg">
+										<icon class="icon-small" data-index="{{index}}" type="cancel" size="30"></icon>
+									</view>
+								</view>
+								<view class="{{enterpriseImg.length >= 9?'display':'choose_img-box'}}" bindtap="chooseBusinessImg">
+									<image src="../../img/add_img.png" class="choose_img"></image>
+								</view>
+							</view>
 						</mp-cell>
 					</mp-cells>
 				</mp-form>
@@ -107,8 +137,8 @@
 			<view class="weui-cells weui-cells_after-title">
 				<view class="weui-cell">
 					<view class="weui-cell__bd">
-						<textarea class="weui-textarea" bindblur="formTextContent" placeholder="请输入文本" style="height: 8.88em" maxlength='-1' placeholder-class="inputFontSize"/>
-					</view>
+						<textarea class="weui-textarea" bindblur="formTextContent" placeholder="请输入文本" style="height: 8.88em" maxlength='-1' placeholder-class="inputFontSize" />
+						</view>
         </view>
       </view>
     </view>
@@ -138,6 +168,26 @@
 			<view class="{{item.checked?'active':''}}" bindtap="handleAccessMethod" data-index="{{index}}" wx:key="index" wx:for="{{infoMethods}}">{{item.name}}</view>
 		</view>
 		</view>
+			<!-- 上传附件 -->
+		<view class="content_container">
+			<mp-cells>
+					<mp-cell>
+						<view>请上传附件(可选)</view>
+							<view class="form_img-contain">
+								<view class=".img_item {{src===''?'img':''}}" wx:for="{{affixPathImg}}" wx:key="*this">
+									<image class="img_item" src="{{item}}"></image>
+									<view class="icon_container" bindtap="deleteEnclosureImg">
+										<icon class="icon-small" data-index="{{index}}" type="cancel" size="30"></icon>
+							  	</view>
+								</view>
+							<view class="{{affixPathImg.length>=9?'display':'choose_img-box'}}" bindtap="chooseEnclosureImg">
+								<image src="../../img/add_img.png" class="choose_img"></image>
+							</view>
+						</view>
+					</mp-cell>
+			</mp-cells>
+		</view>
+						
 		<!-- 提交 -->
 		<button bindtap="subReplyForm" hover-class="none">提交</button>
 	</view>

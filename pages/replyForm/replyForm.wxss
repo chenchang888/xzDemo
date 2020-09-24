@@ -41,6 +41,66 @@ picker {
   padding-left: 32rpx;
 }
 
+/* 添加图片 */
+.form_img-contain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.choose_img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx 0 0 30rpx;
+  border-radius: 20rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #a6a6a6;
+  background-color: #eceeeb;
+}
+
+.form_img,
+image {
+  margin: 20rpx 0 0 30rpx;
+  border-radius: 20rpx;
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.choose_img {
+  width: 60%;
+  height: 60%;
+  margin: 0;
+}
+ 
+.img {
+  width: 0;
+  height: 0;
+}
+
+.img_item{
+  position: relative;
+}
+/* 删除icon */
+.icon_container{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%,-10%);
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 是否现实添加图片 */
+.display {
+  display: none;
+}
+
+/*  */
 .next_btn {
   margin: 50rpx;
   color: #fff;
@@ -85,4 +145,8 @@ button {
   margin: 50rpx;
   color: #fff;
   background-color: var(--themeColor);
+}
+
+.cardImg {
+  width: 100%;
 }

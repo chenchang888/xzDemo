@@ -1,8 +1,7 @@
-@font-face {
+/* @font-face {
   font-family: 'MicrosoftYaHei';
   src: url('https://xzqxcx.ahegov.com/static/css/appletfont/Microsoft-YaHei.ttf');
-}
-
+} */
 page {
   font-family:"MicrosoftYaHei"
 }

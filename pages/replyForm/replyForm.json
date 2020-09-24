@@ -3,7 +3,8 @@
     "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
     "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
     "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
-    "mp-toptips": "/miniprogram_npm/weui-miniprogram/toptips/toptips"
+    "mp-toptips": "/miniprogram_npm/weui-miniprogram/toptips/toptips",
+    "mp-uploader": "/miniprogram_npm/weui-miniprogram/uploader/uploader"
   },
   "navigationBarTitleText": "政府信息公开申请表"
 }
