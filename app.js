@@ -28,7 +28,10 @@ App({
           success: res => {
             // console.log(res);
             if (res.data.code === 1) {
+              
+              // console.log(res);
               this.globalData.openId = res.data.data.OpenId;
+              
               // console.log(this.globalData.openId);
             } else {
               wx.showToast({
@@ -73,10 +76,10 @@ App({
       family: 'MicrosoftYaHei',
       source: 'url("https://xzqxcx.ahegov.com/static/css/appletfont/Microsoft-YaHei.ttf")',
       success(e) {
-        console.log(e, '动态加载字体成功')
+        // console.log(e, '动态加载字体成功')
       },
       fail(e) {
-        console.log(e, '动态加载字体失败')
+        // console.log(e, '动态加载字体失败')
       },
     })
   },

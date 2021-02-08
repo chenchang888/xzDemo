@@ -2,21 +2,19 @@
 	<!-- 顶部滚动区域 -->
 	<view class="index-top-wrapper">
 		<!-- banner -->
-		<view class="banner"  wx:if="{{slideshowList.length > 0}}">
+		<view class="banner" wx:if="{{slideshowList.length > 0}}">
 			<swiper indicator-dots="{{indicatorDots}}" circular autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
 				<block>
-					<swiper-item  wx:for="{{slideshowList}}"   bindtap="toslideshow"
-				 data-id="{{item.id}}" wx:key="id" data-key="{{item.id}}">
-						<image mode="widthFix" src="{{item.backImg}}" style="display: inline;"></image>
+					<swiper-item wx:for="{{slideshowList}}" bindtap="toslideshow" data-id="{{item.id}}" wx:key="id" data-key="{{item.id}}">
+						<image mode="widthFix" style='height:auto' src="{{item.backImg}}" style="display: inline;"></image>
 					</swiper-item>
 				</block>
 			</swiper>
 		</view>
 		<!-- 政府四类 -->
 		<view class="four-policy-type">
-			<view class="item"  bindtap="toProject" data-policyId="{{item.detailId}}" wx:for="{{project}}" 
-			data-projectId="{{item.id}}" data-id="{{item.policyId}}" wx:key="id" data-key="{{item.id}}">
-				<image mode="widthFix"  src="{{item.iconPath}}"></image>
+			<view class="item" bindtap="toProject" data-policyId="{{item.detailId}}" wx:for="{{project}}" data-projectId="{{item.id}}" data-id="{{item.policyId}}" wx:key="id" data-key="{{item.id}}">
+				<image mode="widthFix" style='height:auto' lazy-load="true" src="{{item.iconPath}}"></image>
 				<text>{{item.keyword}}</text>
 			</view>
 		</view>
@@ -26,13 +24,13 @@
 			<view class="img-text-list">
 				<view class="item" wx:for="{{theme}}" bindtap="toPolicyList" data-id="{{item.id}}" data-name="{{item.name}}" wx:key="id" data-key="{{item.id}}">
 					<view class="img-box blue">
-						<image mode="widthFix" src="{{item.icon}}"></image>
+						<image mode="widthFix" style='height:auto' src="{{item.icon}}"></image>
 					</view>
 					<text>{{item.name}}</text>
 				</view>
 				<view class="item" bindtap="toPolicyList">
 					<view class="img-box blue">
-						<image mode="widthFix" src="../../img/more.png"></image>
+						<image mode="widthFix" style='height:auto' src="../../img/more.png"></image>
 					</view>
 					<text>更多政策</text>
 				</view>
@@ -44,13 +42,13 @@
 			<view class="img-text-list">
 				<view class="item person" bindtap="toPolicyList" data-id="{{item.id}}" data-url="{{item.url}}" wx:for="{{matters}}" wx:key="id" data-key="{{item.id}}">
 					<view class="img-box blue">
-						<image mode="widthFix" src="{{item.icon}}"></image>
+						<image mode="widthFix" style='height:auto' src="{{item.icon}}"></image>
 					</view>
 					<text>{{item.title}}</text>
 				</view>
 				<view class="item" bindtap="toPolicyList" wx:if="{{theme.length > 0}}">
 					<view class="img-box blue">
-						<image mode="widthFix" src="../../img/more.png"></image>
+						<image mode="widthFix" style='height:auto' src="../../img/more.png"></image>
 					</view>
 					<text>更多政策</text>
 				</view>
@@ -65,19 +63,19 @@
 	<!-- 底部导航 -->
 	<view class="index-bottom-wrapper">
 		<view class="nav-item" bindtap="reflash">
-			<image src="../../img/b.png" mode="heightFix"></image>
+			<image src="../../img/b.png" style='width:auto' mode="heightFix"></image>
 			<text>首页</text>
 		</view>
 		<view class="nav-item" bindtap="toInteractive">
-			<image src="../../img/icon-lianxi.png" mode="heightFix"></image>
+			<image src="../../img/icon-lianxi.png" style='width:auto' mode="heightFix"></image>
 			<text>政民互动</text>
 		</view>
 		<view class="nav-item" bindtap="gotoMyReply">
-			<image src="../../img/person_reply.png" mode="heightFix"></image>
+			<image src="../../img/person_reply.png" style='width:auto' mode="heightFix"></image>
 			<text>依申请公开</text>
 		</view>
 		<view class="nav-item" bindtap="gotoPerson">
-			<image src="../../img/d-1.png" mode="heightFix"></image>
+			<image src="../../img/d-1.png" style='width:auto' mode="heightFix"></image>
 			<text>个人中心</text>
 		</view>
 	</view>
